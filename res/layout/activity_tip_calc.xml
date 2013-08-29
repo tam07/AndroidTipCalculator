@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipCalc" >
+
+    <EditText
+        android:id="@+id/totalAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/tenPercentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/totalAmt"
+        android:layout_below="@+id/totalAmt"
+        android:layout_marginTop="66dp"
+        android:onClick="calculateTip"
+        android:text="@string/ten_percent" />
+
+    <Button
+        android:id="@+id/fifteenPercentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tenPercentButton"
+        android:layout_alignBottom="@+id/tenPercentButton"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/tenPercentButton"
+        android:text="@string/fifteen_percent" />
+
+    <Button
+        android:id="@+id/twentyPercentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fifteenPercentButton"
+        android:layout_alignBottom="@+id/fifteenPercentButton"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/fifteenPercentButton"
+        android:text="@string/twenty_percent" />
+
+    <TextView
+        android:id="@+id/ta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tenPercentButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="120dp"
+        android:text="@string/tip_amt"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/tipAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ta"
+        android:ems="10" />
+
+</RelativeLayout>
